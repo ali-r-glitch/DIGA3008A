@@ -1,0 +1,36 @@
+
+nav{
+    background-color:  rgba(255, 230, 0, 0.6);
+    backdrop-filter: blur(5px);
+    height: 50px;
+    width: 100%;
+
+}
+nav ul {
+float: right;
+margin-right: 40px;
+
+
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 20px;
+    margin-top: 10px;
+
+}
+nav ul li a {
+    text-decoration: none;
+    color: #fa00f2;
+    font-size: 20px;
+}
+
+nav ul li a:hover {
+    color: #ff0000;
+}
+a.active {
+    background-color: #fa00f2;
+    color: #ffffff;
+    border-radius: 30%;
+}
