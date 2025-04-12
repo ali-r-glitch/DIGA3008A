@@ -1,12 +1,13 @@
-/* Two-column layout without using div or span */
+/* Blog Layout Grid */
 .layout {
     display: grid;
     grid-template-columns: 200px 1fr;
-    height: 80vh;
-    gap: 1rem;
-    padding: 1rem;
+    gap: 2rem;
+    margin: 2rem;
+    min-height: 80vh;
   }
   
+  /* Blog Navigation (Left Side) */
   .blog-nav ul {
     list-style: none;
     padding: 0;
@@ -14,22 +15,29 @@
   }
   
   .blog-nav li {
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
   }
   
   .blog-nav a {
     text-decoration: none;
-    color: inherit;
+    color: #333;
     font-weight: bold;
   }
   
+  /* Blog Content Area (Right Side) */
   .blog-content {
     overflow-y: auto;
+    max-height: 80vh;
     padding-right: 1rem;
-    max-height: 100%;
   }
   
-  .blog-content article {
-    line-height: 1.6;
+  /* Optional: Scrollbar Styling */
+  .blog-content::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .blog-content::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 3px;
   }
   
