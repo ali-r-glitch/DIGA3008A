@@ -12,15 +12,18 @@
     list-style: none;
     padding: 0;
     margin: 0;
+    background-color: rgb(49, 52, 52);
   }
   
   .blog-nav li {
     margin-bottom: 1rem;
+   
   }
   
   .blog-nav a {
+    
     text-decoration: none;
-    color: #333;
+    color: #ff00d999;
     font-weight: bold;
   }
   
