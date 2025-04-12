@@ -1,0 +1,35 @@
+/* Two-column layout without using div or span */
+.layout {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    height: 80vh;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  
+  .blog-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .blog-nav li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .blog-nav a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+  }
+  
+  .blog-content {
+    overflow-y: auto;
+    padding-right: 1rem;
+    max-height: 100%;
+  }
+  
+  .blog-content article {
+    line-height: 1.6;
+  }
+  
