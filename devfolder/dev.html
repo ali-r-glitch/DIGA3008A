@@ -1,64 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ali Raffee | Projects and Dev Work</title>
-    <meta name="description" content="The projects and game development work of Ali Raffee.">
-    <meta name="author" content="Ali Raffee">
-    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
-    <meta property="og:title" content="Ali Raffee's Portfolio" />
-    <meta property="og:type" content="website" />
-    <link rel="stylesheet" href="../stylefolder/navbar.css">
-    <link rel="stylesheet" href="../stylefolder/normalize.css">
-     <!-- Fonts. This is my personal comments not by chatgpt XD-->
-     <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tektur:wght@600&display=swap" rel="stylesheet">
-
+  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ali Raffee | Projects and Dev Work</title>
+  <meta name="description" content="The projects and game development work of Ali Raffee." />
+  <meta name="author" content="Ali Raffee" />
+  <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
+  <meta property="og:title" content="Ali Raffee's Portfolio" />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="../stylefolder/navbar.css" />
+  <link rel="stylesheet" href="../stylefolder/normalize.css" />
+  <link rel="stylesheet" href="devstyle.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&family=Barlow+Condensed:wght@400;700&family=Tektur:wght@600&display=swap" rel="stylesheet" />
 </head>
+<main>
 <body>
-    <nav class="top-nav">
-        <ul>
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="../blogsfolder/index.html">Blogs</a></li>
-          <li><a href="../designfolder/design.html">Design</a></li>
-          <li><a class="active">Projects </a></li>
-          <li><a href="../profilefolder/profile.html">Profile</a></li>
-        </ul>
-        </nav>
-
-    
-
-    <h1>Projects</h1>
+  <nav class="top-nav">
     <ul>
-        <li><a href="#Game1">Egyptian game</a></li>
-        <li><a href="#Game2">Helicopter game</a></li>
-        <li><a href="#Game3">Active Ragdoll</a></li>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../blogsfolder/index.html">Blogs</a></li>
+      <li><a href="../designfolder/design.html">Design</a></li>
+      <li><a class="active">Projects</a></li>
+      <li><a href="../profilefolder/profile.html">Profile</a></li>
     </ul>
+  </nav>
 
-    <article class="h-entry">
-        <h2 id="Game1" class="p-name">Egyptian Game</h2>
-        <img class="u-photo" src="../images/egyptiangamehub.png" width="250" height="250" alt="Egyptian game">
-        <img class="u-photo" src="../images/egyptiangametomb.png" width="250" height="250" alt="Egyptian game">
-        <p class="e-content">The Egyptian game is a narrative puzzle game. The player is transported into a book where they disrupt the reincarnation of the god Osiris. The player must traverse egypt to recollect all the body parts to restart the reincarnation of the god and restore history.  </p>
+  <h1>Projects</h1>
+
+  <section class="projects-grid">
+    <article class="project-card">
+        <a href="https://ali-r-glitch.itch.io/" target="_blank" class="card-link">
+      <figure>
+       
+         <img src="../images/egyptiangamehub.png" alt="Egyptian Game" />
+        
+        <figcaption>
+          <h2>Egyptian Game</h2>
+          <p>A narrative puzzle game set in mythological Egypt. Traverse tombs, recover Osiris’ parts, and restore balance to history.</p>
+        </figcaption>
+      </figure>
+    </a>
     </article>
 
-    <article class="h-entry">
-        <h2 id="Game2" class="p-name">Helicopter Game</h2>
-        <img class="u-photo" src="../images/helicopter.png" width="250" height="250" alt="Helicopter game">
-        <p class="e-content">This is a character controller focused traversal game. The player must collect water and disperse it over burning buildings. If three buildings burn down, the player loses. </p>
+    <article class="project-card">
+        <a href="https://ali-r-glitch.itch.io/" target="_blank" class="card-link">
+            <figure>
+            
+                <img src="../images/helicopter.png" alt="Helicopter Game" />
+        
+                <figcaption>
+                <h2>Helicopter Game</h2>
+                <p>Fly a rescue helicopter, collect water, and save burning buildings. A tense game built around movement mechanics and time pressure.</p>
+                </figcaption>
+            </figure>
+        </a>
     </article>
 
-    <article class="h-entry">
-        <h2 id="Game3" class="p-name">Active Ragdoll</h2>
-        <img class="u-photo" src="../images/octodad1.png" width="250" height="250" alt="Active Ragdoll">
-        <img class="u-photo" src="../images/octodad2.png" width="250" height="250" alt="Active Ragdoll">
-        <p class="e-content">This is a prototype inspired by <a href="https://store.steampowered.com/app/2383860/Octodad_Student_Edition/" target="_blank">Octodad</a>. It is an active ragdoll that is difficult to traverse the world woth. The players goal is to complete simple tasks with the character  </p>
+    <article class="project-card">
+        <a href="https://ali-r-glitch.itch.io/" target="_blank" class="card-link">
+            <figure>
+               
+                <img src="../images/octodad1.png" alt="Active Ragdoll" />
+            
+                <figcaption>
+                <h2>Active Ragdoll</h2>
+                <p>A prototype inspired by Octodad. Complete mundane tasks with wobbly limbs in a hilarious struggle for control and physics.</p>
+                </figcaption>
+            </figure>
+          </a>
     </article>
-
-    <footer>
-      
-        <em><small>Alulu Studios 2025</small></em>
-    </footer>
+  </section>
+</main>
+  <footer>
+    <em><small>Alulu Studios 2025</small></em>
+  </footer>
 </body>
 </html>
