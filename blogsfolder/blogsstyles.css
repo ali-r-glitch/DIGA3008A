@@ -32,6 +32,7 @@
     overflow-y: auto;
     max-height: 80vh;
     padding-right: 1rem;
+    background-color: rgba(0,0,0,0.7);
   }
   
   /* Optional: Scrollbar Styling */
