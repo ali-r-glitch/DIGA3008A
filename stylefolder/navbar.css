@@ -91,7 +91,11 @@ footer{
     bottom: -20px; 
 
   }
-
+  a:link,
+  a:visited {
+    color: #ff00d999; 
+   
+  }
   
   footer a {
     color: #ff00d9;
