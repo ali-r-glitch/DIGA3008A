@@ -1,80 +1,85 @@
+
 /* Blog Layout Grid */
 .layout {
-    display: grid;
-    grid-template-columns: 200px 1fr;
-    gap: 2rem;
-    margin: 2rem;
-    min-height: 80vh;
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 2rem;
+  margin: 2rem auto;
+  padding: 1rem;
+  max-width: 1200px;
+  min-height: 80vh;
+}
+
+/* Blog Navigation (Left Side) */
+.blog-nav ul {
+  list-style: none;
+  padding: 1rem;
+  margin: 0;
+  background-color: rgba(49, 52, 52, 0.9);
+  border-radius: 12px;
+}
+
+.blog-nav li {
+  margin-bottom: 1rem;
+}
+
+.blog-nav a {
+  display: block;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  color: #ff00d999;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.blog-nav a:hover {
+  background-color: #ff00d955;
+  color: #ffffff;
+}
+
+/* Blog Content Area (Right Side) */
+.blog-content {
+  overflow-y: auto;
+  max-height: 80vh;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 12px;
+  box-shadow: 0 0 10px #4aa0de66;
+}
+
+/* Optional: Scrollbar Styling */
+.blog-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.blog-content::-webkit-scrollbar-thumb {
+  background-color: #4aa0de;
+  border-radius: 4px;
+}
+
+
+@media (max-width: 768px) {
+  .layout {
+    grid-template-columns: 1fr;
   }
-  
-  /* Blog Navigation (Left Side) */
+
   .blog-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    background-color: rgb(49, 52, 52);
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 1rem;
+    background-color: transparent;
+    padding: 0.5rem;
   }
-  
-  .blog-nav li {
-    margin-bottom: 1rem;
-   
-  }
-  
+
   .blog-nav a {
-    
-    text-decoration: none;
-    color: #ff00d999;
-    font-weight: bold;
+    white-space: nowrap;
+    padding: 0.5rem 1rem;
+    background-color: rgba(49, 52, 52, 0.8);
   }
-  
-  /* Blog Content Area (Right Side) */
+
   .blog-content {
-    overflow-y: auto;
-    max-height: 80vh;
-    padding-right: 1rem;
-    background-color: rgba(0,0,0,0.7);
+    max-height: unset;
   }
-  
-  /* Optional: Scrollbar Styling */
-  .blog-content::-webkit-scrollbar {
-    width: 6px;
-  }
-  
-  .blog-content::-webkit-scrollbar-thumb {
-    background-color: #ccc;
-    border-radius: 3px;
-  }
-  @media (max-width: 768px) {
-    .layout {
-      grid-template-columns: 1fr;
-    }
-  
-    .blog-nav ul {
-      background-color: rgb(49, 52, 52);
-      padding: 1rem;
-    }
-  
-    .blog-nav {
-      order: 1;
-    }
-  
-    .blog-content {
-      order: 2;
-      max-height: none;
-    }
-  }
-  @media (max-width: 768px) {
-    body {
-      font-size: 1.1rem;
-    }
-  
-    .blog-nav a {
-      font-size: 1rem;
-    }
-  
-    .blog-content {
-      font-size: 1rem;
-    }
-  }
-    
-  
+}

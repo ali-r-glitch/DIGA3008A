@@ -1,0 +1,37 @@
+nav.sub-nav {
+    position: sticky;
+    top: 60px; 
+    z-index: 998;
+    background-color: rgb(49, 52, 52); 
+   
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 0.5rem 1rem;
+  }
+  
+  nav.sub-nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 1rem;
+  }
+  
+  nav.sub-nav ul li a {
+    text-decoration: none;
+    padding: 0.4rem 0.8rem;
+    font-weight: 500;
+    color: #ffffff;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  nav.sub-nav ul li a:hover,
+  nav.sub-nav ul li a.active-sub {
+    background-color: #e20b90;
+    color: #fff;
+  }
+  html {
+    scroll-padding-top: 100px;
+  }
+  
