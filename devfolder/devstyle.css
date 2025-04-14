@@ -63,22 +63,28 @@
     flex: 1; /* Pushes the footer down */
   }
   
-  footer {
-    background-color: #1a1a1a;
-    color: #ccc;
-    padding: 1rem;
-    text-align: center;
-    font-style: italic;
-    font-size: 0.9rem;
-  }
-  body footer {
-    background-color: #1a1a1a !important;
-    color: #ccc !important;
-    padding: 1rem !important;
-    text-align: center !important;
-    font-style: italic !important;
-    font-size: 0.9rem !important;
-    border-top: 1px solid #333;
+  .photo-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+    flex-wrap: wrap;
   }
   
+  .photo-grid img {
+    flex: 1 1 300px; /* min width 300px, grows as needed */
+    max-width: 30%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  .photo-grid img:hover {
+    transform: scale(1.05);
+  }
+  
+  
+ 
   
