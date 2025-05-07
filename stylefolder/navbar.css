@@ -79,6 +79,10 @@ body{
   font-size: 20px;
       
   }
+  .tech-logos{
+  color: white;
+  }
+  
  .centreimage{
     display: block;
     margin: auto;
