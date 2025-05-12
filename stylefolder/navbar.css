@@ -1,19 +1,18 @@
-
-nav.top-nav{
-   
-    background-color: rgba(68, 65, 65, 0.7);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    height: 60px;  /* NOT 100% */
-    width: 100%;
-    position: sticky;
-    top: 0;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    z-index: 999;
-
+/* --- MAIN NAVIGATION STYLES --- */
+nav.top-nav {
+  background-color: rgba(68, 65, 65, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  height: 60px;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  z-index: 999;
 }
+
 nav.top-nav ul {
   display: flex;
   margin: 0;
@@ -21,94 +20,134 @@ nav.top-nav ul {
 }
 
 nav.top-nav ul li a.active:hover {
-    color: #ffffff;
-    background-color:  #ff00d999;
-    border-radius: 30%;
+  color: #ffffff;
+  background-color: #ff00d999;
+  border-radius: 30%;
 }
-
 
 nav.top-nav ul li {
-    list-style: none;
-    display: inline-block;
-    margin-right: 20px;
-    margin-top: 0px;
-
+  list-style: none;
+  display: inline-block;
+  margin-right: 20px;
+  margin-top: 0px;
 }
+
 nav.top-nav ul li a {
-    text-decoration: none;
-    color: #ffffff;
-    font-size: 20px;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 20px;
 }
 
 nav.top-nav ul li a:hover {
-    color: #4AA0DE;
+  color: #4AA0DE;
 }
+
 a.active {
-    background-color:  #ff00d999;
-    
-    color: #ffffff;
-    border-radius: 30%;
+  background-color: #ff00d999;
+  color: #ffffff;
+  border-radius: 30%;
 }
-h1{
-    color: #4AA0DE;
-    text-align: center;
-    font-size: 50px;
-    margin-top: 20px;
-    font-family: "Tektur", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 600;
-  font-style: normal;
-  font-variation-settings:"wdth" 100;
-} 
 
-h2{
-    color: #af2396;
-    text-align: center;
-    font-size: 30px;
-    margin-top: 20px;
-    font-family: "Arimo", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 600;
+/* --- TYPOGRAPHY & GENERAL STYLES --- */
+h1 {
+  color: #4AA0DE;
+  text-align: center;
+  font-size: 50px;
+  margin-top: 20px;
+  font-family: "Tektur", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
   font-style: normal;
-  font-variation-settings:"wdth" 50;
-    
-  }
-body{
+  font-variation-settings: "wdth" 100;
+}
+
+h2 {
+  color: #af2396;
+  text-align: center;
+  font-size: 30px;
+  margin-top: 20px;
+  font-family: "Arimo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings: "wdth" 50;
+}
+
+body {
   color: rgb(245, 240, 240);
-  background-color:black ;
+  background-color: black;
   font-size: 20px;
-      
-  }
-  .tech-logos{
-  color: white;
-  }
-  
- .centreimage{
-    display: block;
-    margin: auto;
-    width: 20%;
-  }
-  
-footer{
-    background-color:  rgba(233, 225, 225, 0.6);
-    position: relative;
-    bottom: -20px; 
+}
 
+.tech-logos {
+  color: white;
+}
+
+.centreimage {
+  display: block;
+  margin: auto;
+  width: 20%;
+}
+
+footer {
+  background-color: rgba(233, 225, 225, 0.6);
+  position: relative;
+  bottom: -20px;
+}
+
+a:link,
+a:visited {
+  color: #ff00d999;
+}
+
+footer a {
+  color: #ff00d9;
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+
+footer a:hover {
+  color: #4AA0DE;
+}
+
+/* --- RESPONSIVE BURGER MENU --- */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 30px;
+  color: white;
+  margin-left: auto;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+  nav.top-nav {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: auto;
   }
-  a:link,
-  a:visited {
-    color: #ff00d999; 
-   
+
+  .nav-toggle {
+    display: block;
   }
-  
-  footer a {
-    color: #ff00d9;
-    text-decoration: none;
-    margin: 0 0.5rem;
+
+  nav.top-nav ul {
+    flex-direction: column;
+    width: 100%;
+    display: none;
+    background-color: rgba(68, 65, 65, 0.9);
+    margin-top: 0.5rem;
+    padding: 0.5rem 1rem;
   }
-  
-  footer a:hover {
-    color: #4AA0DE;
+
+  nav.top-nav ul li {
+    margin: 0.5rem 0;
   }
-  
- 
+
+  nav.top-nav ul.show {
+    display: flex;
+  }
+}
