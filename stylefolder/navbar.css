@@ -13,23 +13,17 @@ nav.top-nav {
   z-index: 999;
 }
 
-nav.top-nav ul {
+nav.top-nav .nav-links {
   display: flex;
+  flex-direction: row;
+  list-style: none;
   margin: 0;
   padding: 0 1rem;
 }
 
-nav.top-nav ul li a.active:hover {
-  color: #ffffff;
-  background-color: #ff00d999;
-  border-radius: 30%;
-}
-
 nav.top-nav ul li {
   list-style: none;
-  display: inline-block;
   margin-right: 20px;
-  margin-top: 0px;
 }
 
 nav.top-nav ul li a {
@@ -40,6 +34,12 @@ nav.top-nav ul li a {
 
 nav.top-nav ul li a:hover {
   color: #4AA0DE;
+}
+
+nav.top-nav ul li a.active:hover {
+  color: #ffffff;
+  background-color: #ff00d999;
+  border-radius: 30%;
 }
 
 a.active {
@@ -110,8 +110,8 @@ footer a:hover {
   color: #4AA0DE;
 }
 
-/* --- RESPONSIVE BURGER MENU --- */
-.nav-toggle {
+/* --- BURGER MENU STYLES --- */
+.burger {
   display: none;
   background: none;
   border: none;
@@ -122,7 +122,37 @@ footer a:hover {
   cursor: pointer;
 }
 
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px 0;
+  transition: all 0.3s ease;
+}
 
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2 {
+  opacity: 0;
+}
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* --- SLIDE-IN AND FADE ANIMATION --- */
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* --- MOBILE STYLES --- */
 @media (max-width: 768px) {
   nav.top-nav {
     flex-wrap: wrap;
@@ -130,24 +160,61 @@ footer a:hover {
     height: auto;
   }
 
-  .nav-toggle {
+  .burger {
     display: block;
   }
 
-  nav.top-nav ul {
-    flex-direction: column;
-    width: 100%;
+  .nav-links {
     display: none;
-    background-color: rgba(68, 65, 65, 0.9);
-    margin-top: 0.5rem;
-    padding: 0.5rem 1rem;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    height: 92vh;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: rgba(68, 65, 65, 0.95);
+    padding-top: 2rem;
+    z-index: 998;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
   }
 
-  nav.top-nav ul li {
-    margin: 0.5rem 0;
-  }
-
-  nav.top-nav ul.show {
+  .nav-links.nav-active {
     display: flex;
+    transform: translateX(0%);
+  }
+
+  .nav-links li {
+    opacity: 1;
+    margin: 1rem 0;
+  }
+
+  .nav-links.nav-active li {
+    animation: navLinkFade 0.5s ease forwards;
+  }
+}
+
+/* --- DESKTOP STYLES --- */
+@media (min-width: 769px) {
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    position: static;
+    background: none;
+    height: auto;
+    width: auto;
+    transform: none;
+    padding: 0;
+  }
+
+  .nav-links li {
+    opacity: 1;
+    margin-top: 0;
+  }
+
+  .burger {
+    display: none;
   }
 }
