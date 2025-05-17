@@ -34,4 +34,162 @@ nav.sub-nav {
   html {
     scroll-padding-top: 100px;
   }
-  
+  /* ===== Timeline Styles ===== */
+
+
+.timeline-section {
+  padding: 4rem 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.timeline-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  font-weight: 600;
+}
+
+.timeline-container {
+  position: relative;
+  padding: 2rem 0;
+}
+
+/* Center vertical line */
+.timeline-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 4px;
+  background: #ccc;
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+.timeline-block {
+  position: relative;
+  width: 50%;
+  padding: 1rem 2rem;
+  box-sizing: border-box;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
+
+.timeline-block.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Common marker styles */
+.timeline-marker {
+  position: absolute;
+  top: 1rem;
+  width: 14px;
+  height: 14px;
+  background: #0070f3;
+  border: 3px solid white;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px #0070f3;
+  z-index: 1;
+}
+
+/* Left-aligned content */
+.timeline-block.left {
+  left: 0;
+  text-align: right;
+}
+
+.timeline-block.left .timeline-content {
+  margin-right: auto;
+}
+
+.timeline-block.left .timeline-marker {
+  right: -7px;
+}
+
+/* Right-aligned content */
+.timeline-block.right {
+  left: 50%;
+  text-align: left;
+}
+
+.timeline-block.right .timeline-content {
+  margin-left: auto;
+}
+
+.timeline-block.right .timeline-marker {
+  left: -7px;
+}
+
+.timeline-content {
+  background: white;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  max-width: 90%;
+}
+
+.timeline-content h3 {
+  margin-top: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.timeline-content p {
+  margin: 0.5rem 0 0;
+  line-height: 1.6;
+}
+.read-more-btn {
+  margin-top: 0.5rem;
+  background: none;
+  border: none;
+  color: #0070f3;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+}
+
+.more-text {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  display: inline-block; 
+}
+
+.more-text.expanded {
+  max-height: 500px; /* enough for multiple paragraphs */
+}
+
+.hidden {
+  display: none;
+}
+
+
+/* Responsive stacking */
+@media (max-width: 768px) {
+  .timeline-block,
+  .timeline-block.left,
+  .timeline-block.right {
+    width: 100%;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    text-align: left;
+  }
+
+  .timeline-block .timeline-content {
+    margin: 0 auto;
+  }
+
+  .timeline-block .timeline-marker {
+    left: calc(50% - 7px);
+    right: auto;
+  }
+
+  .timeline-line {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
