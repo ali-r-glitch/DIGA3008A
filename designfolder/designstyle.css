@@ -109,6 +109,17 @@ nav.sub-nav {
 .timeline-block.left .timeline-marker {
   right: -7px;
 }
+.timeline-block.right.expanded {
+  width: 80% !important;
+  transition: width 0.4s ease;
+}
+
+.timeline-block.left.expanded {
+  width: 80% !important;
+  transition: width 0.4s ease;
+  left: auto;       /* override left */
+  right: 0;         /* anchor to right edge so expansion goes left */
+}
 
 /* Right-aligned content */
 .timeline-block.right {
@@ -166,7 +177,10 @@ nav.sub-nav {
 .hidden {
   display: none;
 }
-
+.timeline-block.expanded {
+  width: 80% !important; /* or a value that fits your design */
+  transition: width 0.4s ease;
+}
 
 /* Responsive stacking */
 @media (max-width: 768px) {

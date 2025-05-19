@@ -32,16 +32,19 @@ document.addEventListener("DOMContentLoaded", function () {
   // Read more toggle logic
   const buttons = document.querySelectorAll(".read-more-btn");
   buttons.forEach(btn => {
-    btn.addEventListener("click", () => {
-      const moreText = btn.previousElementSibling;
-      moreText.classList.toggle("expanded");
+  btn.addEventListener("click", () => {
+    const moreText = btn.previousElementSibling;
+    const timelineBlock = btn.closest('.timeline-block');
 
-      if (btn.textContent === "Read more") {
-        btn.textContent = "Read less";
-      } else {
-        btn.textContent = "Read more";
-      }
-    });
+    moreText.classList.toggle("expanded");
+    timelineBlock.classList.toggle("expanded");
+
+    if (btn.textContent === "Read more") {
+      btn.textContent = "Read less";
+    } else {
+      btn.textContent = "Read more";
+    }
   });
+});
 });
 

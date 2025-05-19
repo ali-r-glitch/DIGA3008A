@@ -4,7 +4,7 @@ nav.top-nav {
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   height: 60px;
-  width: 100%;
+    width: 100%;
   position: sticky;
   top: 0;
   display: flex;
@@ -13,13 +13,7 @@ nav.top-nav {
   z-index: 999;
 }
 
-nav.top-nav .nav-links {
-  display: flex;
-  flex-direction: row;
-  list-style: none;
-  margin: 0;
-  padding: 0 1rem;
-}
+
 
 nav.top-nav ul li {
   list-style: none;
@@ -46,6 +40,14 @@ a.active {
   background-color: #ff00d999;
   color: #ffffff;
   border-radius: 30%;
+}
+.nav-container {
+   width: 100%;          /* make full width */
+  display: flex;
+  flex-direction: row;  /* horizontal layout */
+  align-items: center;
+  justify-content: flex-start; /* align to left */
+  margin-right: 0;
 }
 
 /* --- TYPOGRAPHY & GENERAL STYLES --- */
@@ -170,7 +172,7 @@ footer a:hover {
     top: 60px;
     right: 0;
     height: 92vh;
-    width: 100%;
+    width: 30%;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
@@ -182,14 +184,25 @@ footer a:hover {
   }
 
   .nav-links.nav-active {
-    display: flex;
-    transform: translateX(0%);
+      display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+  justify-content: flex-start;
+  transform: translateX(0%);
+  padding-left: 1rem; 
   }
 
-  .nav-links li {
-    opacity: 1;
-    margin: 1rem 0;
-  }
+.nav-links li {
+  display: block;
+  width: 100%; /* makes the clickable area bigger */
+  margin: 1rem 0;
+}
+
+.nav-links li a {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 1rem;
+}
 
   .nav-links.nav-active li {
     animation: navLinkFade 0.5s ease forwards;
@@ -199,13 +212,10 @@ footer a:hover {
 /* --- DESKTOP STYLES --- */
 @media (min-width: 769px) {
   .nav-links {
-    display: flex;
+     display: flex;
     flex-direction: row;
-    position: static;
-    background: none;
-    height: auto;
-    width: auto;
-    transform: none;
+    list-style: none;
+    margin: 0;
     padding: 0;
   }
 
@@ -217,4 +227,11 @@ footer a:hover {
   .burger {
     display: none;
   }
+  .nav-container {
+    width: 100%;
+    flex-direction: row;  /* change from column to row */
+    align-items: center;  /* replace invalid 'left' */
+    justify-content: flex-start;
+  }
 }
+
