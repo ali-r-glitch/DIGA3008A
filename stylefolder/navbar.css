@@ -111,7 +111,9 @@ footer a {
 footer a:hover {
   color: #4AA0DE;
 }
-
+#typed-blog {
+  white-space: pre-line; /* This preserves newlines and paragraphs */
+}
 /* --- BURGER MENU STYLES --- */
 .burger {
   display: none;
