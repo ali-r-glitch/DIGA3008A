@@ -15,14 +15,21 @@
 <link rel="stylesheet" href="blogsstyles.css">
 </head>
 <body class="h-card">
-  <nav class="top-nav">
-    <ul>
+ <nav class="top-nav">
+     <div class="nav-container">
+   <ul class="nav-links">
       <li><a href="../index.html">Home</a></li>
       <li><a class="active">Blogs</a></li>
       <li><a href="../designfolder/design.html">Design</a></li>
       <li><a href="../devfolder/dev.html">Projects</a></li>
-     
+ 
     </ul>
+    <button class="burger nav-toggle">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </button>
+  </div>
   </nav>
 
   <main>
@@ -41,7 +48,8 @@
 
       <section class="blog-content">
         <h1 class="p-name">Wireframes and UI Elements for a Professional and Personal Portfolio</h1>
-        <article>
+       <div id="typed-blog"></div>
+        <article id="blog-source" >
           <p class="e-content">
             
               This website was created as a portfolio to showcase my work and achievements so far. My design focuses on creating an intuitive and simple way to explore everything I’ve done. I aim to strike a balance between being professional and relaxed, as the site should represent me personally while still appealing to the people I want to showcase it to.
@@ -122,6 +130,8 @@
         </article>
       </section>
     </section>
+     <script src="../scriptsfolder/overall.js"></script>
+     <script src="script.js"></script>
   </main>
 
   <footer>

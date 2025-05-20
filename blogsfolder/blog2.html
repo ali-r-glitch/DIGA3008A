@@ -16,13 +16,20 @@
 </head>
 <body class="h-card">
   <nav class="top-nav">
-    <ul>
+     <div class="nav-container">
+   <ul class="nav-links">
       <li><a href="../index.html">Home</a></li>
       <li><a class="active">Blogs</a></li>
       <li><a href="../designfolder/design.html">Design</a></li>
       <li><a href="../devfolder/dev.html">Projects</a></li>
-    
+ 
     </ul>
+    <button class="burger nav-toggle">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </button>
+  </div>
   </nav>
 
   <main>
@@ -41,8 +48,8 @@
 
       <section class="blog-content">
         <h1 class="p-name">Reflecting on Initial Wireframes and Website Structure</h1>
-        <article class="e-content">
-        
+        <div id="typed-blog"></div>
+        <article id="blog-source" >
           <h2>File Structure</h2>
           <p>
             The file structure will be laid out where the root file will be the main folder which houses all other folders. It will contain folders: Index, Blog, Design, Profile, Portfolio (all folders just mentioned will have folders with code specific for them), Scripts, Images, Styles.

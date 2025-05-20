@@ -16,13 +16,20 @@
 </head>
 <body class="h-card">
   <nav class="top-nav">
-    <ul>
+     <div class="nav-container">
+   <ul class="nav-links">
       <li><a href="../index.html">Home</a></li>
       <li><a class="active">Blogs</a></li>
       <li><a href="../designfolder/design.html">Design</a></li>
       <li><a href="../devfolder/dev.html">Projects</a></li>
-   
+ 
     </ul>
+    <button class="burger nav-toggle">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </button>
+  </div>
   </nav>
 
   <main>
@@ -41,8 +48,8 @@
 
       <section class="blog-content">
         <h1 class="p-name">A Look at Website Inspirations and Design Preferences</h1>
-        <article class="e-content">
-
+         <div id="typed-blog"></div>
+        <article id="blog-source" >
           <h2>Reflecting on My Wireframes</h2>
           <p>
             Looking back at the wireframes I originally created, it's clear that I was quite confused about good design practices and what I actually liked about other websites. My initial design was impractical because it didn’t even include a navigation bar. I relied on single links scattered vertically across the page to connect to other sections. Without setting a consistent structure for my website, it became difficult to navigate, and as a result, it lacked functionality.
@@ -151,6 +158,8 @@
         
       </section>
     </section>
+     <script src="../scriptsfolder/overall.js"></script>
+     <script src="script.js"></script>
   </main>
 
   <footer>

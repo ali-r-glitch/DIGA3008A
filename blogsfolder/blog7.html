@@ -16,14 +16,21 @@
 </head>
 
 <body class="h-card">
-  <nav class="top-nav">
-    <ul>
+ <nav class="top-nav">
+     <div class="nav-container">
+   <ul class="nav-links">
       <li><a href="../index.html">Home</a></li>
       <li><a class="active">Blogs</a></li>
       <li><a href="../designfolder/design.html">Design</a></li>
       <li><a href="../devfolder/dev.html">Projects</a></li>
-    
+ 
     </ul>
+    <button class="burger nav-toggle">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </button>
+  </div>
   </nav>
 
   <main>
@@ -42,7 +49,8 @@
 
       <section class="blog-content">
         <h1 class="p-name">Analyzing Website Designs: Johannesburg Zoo and Parktown Boys</h1>
-        <article>
+       <div id="typed-blog"></div>
+        <article id="blog-source" >
           <p class="e-content">
             <strong>The Johannesburg Zoo</strong><br>
             <a href="https://www.jhbcityparksandzoo.com/services-facilities/zoo/about" target="_blank">
@@ -117,6 +125,8 @@
         
       </section>
     </section>
+     <script src="../scriptsfolder/overall.js"></script>
+     <script src="script.js"></script>
   </main>
 
   <footer>

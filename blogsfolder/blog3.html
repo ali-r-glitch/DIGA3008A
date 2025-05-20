@@ -15,14 +15,21 @@
 <link rel="stylesheet" href="blogsstyles.css">
 </head>
 <body class="h-card">
-  <nav class="top-nav">
-    <ul>
+ <nav class="top-nav">
+     <div class="nav-container">
+   <ul class="nav-links">
       <li><a href="../index.html">Home</a></li>
       <li><a class="active">Blogs</a></li>
       <li><a href="../designfolder/design.html">Design</a></li>
       <li><a href="../devfolder/dev.html">Projects</a></li>
-      
+ 
     </ul>
+    <button class="burger nav-toggle">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </button>
+  </div>
   </nav>
 
   <main>
@@ -41,8 +48,8 @@
 
       <section class="blog-content">
         <h1 class="p-name">User Interface and Experience Design: Crafting a Simple Yet Effective Portfolio</h1>
-        <article class="e-content">
-      
+         <div id="typed-blog"></div>
+        <article id="blog-source" >
           <h2>Development Focus</h2>
           <p>
             This week I focused on building the bones of my website. I worked on folder structure, traversal between pages, the functionality of jump links, and implementation of images and videos. I focused on the actual HTML “code” this week.
@@ -105,6 +112,8 @@
       
       </section>
     </section>
+     <script src="../scriptsfolder/overall.js"></script>
+     <script src="script.js"></script>
   </main>
 
   <footer>

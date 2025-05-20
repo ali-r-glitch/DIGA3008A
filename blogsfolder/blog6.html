@@ -16,15 +16,21 @@
 </head>
 <body class="h-card">
   <nav class="top-nav">
-    <ul>
+     <div class="nav-container">
+   <ul class="nav-links">
       <li><a href="../index.html">Home</a></li>
       <li><a class="active">Blogs</a></li>
       <li><a href="../designfolder/design.html">Design</a></li>
       <li><a href="../devfolder/dev.html">Projects</a></li>
-     
+ 
     </ul>
+    <button class="burger nav-toggle">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </button>
+  </div>
   </nav>
-
   <main>
     <section class="layout">
       <nav class="blog-nav">
@@ -39,7 +45,8 @@
         </ul>
       </nav>
 
-      <section class="blog-content">
+      <div id="typed-blog"></div>
+        <article id="blog-source" >
         <h1 class="p-name">Designing a Portfolio: Color Palettes, Fonts, and UI Inspirations</h1>
         <article>
           <p class="e-content">
@@ -78,6 +85,8 @@
         </article>
       </section>
     </section>
+     <script src="../scriptsfolder/overall.js"></script>
+     <script src="script.js"></script>
   </main>
 
   <footer>
