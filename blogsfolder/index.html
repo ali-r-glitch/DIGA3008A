@@ -16,13 +16,20 @@
 </head>
 <body class="h-card">
   <nav class="top-nav">
-    <ul>
+     <div class="nav-container">
+   <ul class="nav-links">
       <li><a href="../index.html">Home</a></li>
       <li><a class="active">Blogs</a></li>
       <li><a href="../designfolder/design.html">Design</a></li>
       <li><a href="../devfolder/dev.html">Projects</a></li>
  
     </ul>
+    <button class="burger nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </button>
+  </div>
   </nav>
 
   <main>
@@ -42,7 +49,8 @@
       <section class="blog-content">
         <h1>Blogs</h1>
         <h2 class="p-name">Exploring the Internet and My GitHub Experience</h2>
-<article>
+         <div id="typed-blog">
+<article id="blog-source">
   <p class="e-content">
     <strong>Readings:</strong>  
     <em>The Library of Babel</em> by Jorge Luis Borges (1941);  
@@ -90,10 +98,12 @@
     I want to dive deeper into the coding intricacies of HTML, CSS, and JavaScript. More importantly, I aim to understand what makes a good user interface. I often struggle with creating simple and user-friendly UI in my games. Through this course, I hope to learn the theories and practices that make UI intuitive and engaging.
   </p>
 </article>
-
+</div>
     </section>
   </main>
 
+     <script src="../scriptsfolder/overall.js"></script>
+     <script src="script.js"></script>
   <footer>
     <em><small>Alulu Studios 2025</small></em>
   </footer>
