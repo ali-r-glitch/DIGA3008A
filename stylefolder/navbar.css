@@ -114,6 +114,11 @@ footer a:hover {
 #typed-blog {
   white-space: pre-line; /* This preserves newlines and paragraphs */
 }
+.u-photo{
+width:  250px;
+height: 250px;
+
+}
 /* --- BURGER MENU STYLES --- */
 .burger {
   display: none;
@@ -231,8 +236,8 @@ footer a:hover {
   }
   .nav-container {
     width: 100%;
-    flex-direction: row;  /* change from column to row */
-    align-items: center;  /* replace invalid 'left' */
+    flex-direction: row; 
+    align-items: center; 
     justify-content: flex-start;
   }
 }
