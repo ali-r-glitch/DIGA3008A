@@ -99,7 +99,7 @@ nav.sub-nav {
 /* Left-aligned content */
 .timeline-block.left {
   left: 0;
-  text-align: right;
+  text-align: left;
 }
 
 .timeline-block.left .timeline-content {
@@ -113,12 +113,10 @@ nav.sub-nav {
   width: 80% !important;
   transition: width 0.4s ease;
 }
-
 .timeline-block.left.expanded {
   width: 80% !important;
-  transition: width 0.4s ease;
-  left: auto;       /* override left */
-  right: 0;         /* anchor to right edge so expansion goes left */
+  transform: translateX(-30%);
+  transition: width 0.4s ease, transform 0.4s ease;
 }
 
 /* Right-aligned content */
