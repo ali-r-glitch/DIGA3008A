@@ -17,7 +17,11 @@
   border-radius: 12px;
   position: relative;
 }
-
+#activeBlog{
+  background-color: #ff00d999;
+  color: #ffffff;
+  border-radius: 30%;
+}
 .blog-content {
   height: 100%; /* Match height of layout */
   overflow-y: auto;
