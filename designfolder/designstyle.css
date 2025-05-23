@@ -147,10 +147,7 @@
 .hidden {
   display: none;
 }
-.timeline-block.expanded {
-  width: 80% !important; /* or a value that fits your design */
-  transition: width 0.4s ease;
-}
+
 
 /* Responsive stacking */
 /* @media (max-width: 768px) {
@@ -178,46 +175,43 @@
   }
 } */
 
-
+@media (min-width: 769px) {
+.timeline-block.expanded {
+  width: 80% !important;
+  transition: width 0.4s ease;
+}
+}
 
 @media (max-width: 768px) {
-  .timeline {
-    position: relative;
-    margin: 2rem 0;
-    padding-left: 2rem; /* space for the vertical line */
-  }
-
-  .timeline::before {
-    left: 1rem; /* move the line to the left */
-    width: 2px;
-  }
-
-  .timeline-item {
-    position: relative;
-    margin: 2rem 0;
-    padding-left: 2rem;
-    width: 100%;
+  html, body {
+  overflow-x: hidden;
+}
+  .timeline-block {
+    width: 100% !important;
+    margin: 1rem auto;
+    float: none !important;
+    left: 0 !important;
+    transform: none !important;
     text-align: left;
-    clear: both;
+    display: block;
+    overflow: visible;
   }
-
-  .timeline-item::before {
-    left: 0.5rem; /* bullet or icon position */
-    margin-left: 0;
+   .timeline-block.left.expanded,
+  .timeline-block.right.expanded {
+    width: 100% !important;
+    transform: none !important;
+  }
+  .timeline-block.expanded {
+    width: 100% !important; /* 👈 Force full width on mobile */
+    transform: none !important;
   }
 
   .timeline-content {
-    margin-left: 1rem;
+    width: 100%;
+    box-sizing: border-box;
     padding: 1rem;
     background-color: rgba(255, 255, 255, 0.05);
-    border-left: 3px solid #ff00d9;
+    border-left: 1px solid #ff00d9;
     border-radius: 0.5rem;
-  }
-
-  /* If you're using alternating left/right items */
-  .timeline-item.left,
-  .timeline-item.right {
-    float: none;
-    text-align: left;
   }
 }
