@@ -142,7 +142,7 @@
 }
 
 .more-text.expanded {
-  max-height: 500px; /* enough for multiple paragraphs */
+  max-height: 500px; 
   overflow-y: auto;  /* allows scrolling */
 
 }
@@ -206,7 +206,7 @@
     transform: none !important;
   }
   .timeline-block.expanded {
-    width: 100% !important; /* 👈 Force full width on mobile */
+    width: 100% !important; /*  Force full width on mobile */
     transform: none !important;
   }
 

@@ -19,8 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Burger animation
       burger.classList.toggle('toggle');
   
-      // ARIA support
-      const expanded = burger.getAttribute('aria-expanded') === 'true';
+     
       burger.setAttribute('aria-expanded', !expanded);
     });
   });
