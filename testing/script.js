@@ -11,9 +11,9 @@ document.addEventListener('DOMContentLoaded', () => {
   
     let hue = 0;
     let grid = [];
-    let mode = 1; // Start in Vivid Mode
+    let mode = 1;
   
-    // Initialize grid
+    // Initialize grid with default values
     for (let y = 0; y < rows; y++) {
       grid[y] = [];
       for (let x = 0; x < cols; x++) {
@@ -32,24 +32,24 @@ document.addEventListener('DOMContentLoaded', () => {
   
     // Draw grid for Vivid or Dimmer modes
     function drawGrid() {
-      hue += 0.5; // Slower hue shift for Vivid mode
+      hue += 0.5;
       if (hue > 360) hue = 0;
   
       for (let y = 0; y < rows; y++) {
         for (let x = 0; x < cols; x++) {
           let block = grid[y][x];
           
-          // Vivid Mode: More vibrant colors and quicker fades
+          
           if (mode === 1) {
             if (block.alpha > 0) {
-              block.alpha -= 0.01; // faster fade out in Vivid mode
+              block.alpha -= 0.01;
             }
           }
   
-          // Dimmer Mode: Softer colors and slower fades
+          // Dimmer Mode
           if (mode === 2) {
             if (block.alpha > 0) {
-              block.alpha -= 0.005; // slower fade out in Dimmer mode
+              block.alpha -= 0.005; 
             }
           }
   
@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
   
-    // Update brightness based on mouse movement
+  
     canvas.addEventListener("mousemove", (e) => {
       const x = Math.floor(e.clientX / blockSize);
       const y = Math.floor(e.clientY / blockSize);
@@ -72,11 +72,10 @@ document.addEventListener('DOMContentLoaded', () => {
           const ny = y + dy;
           if (nx >= 0 && nx < cols && ny >= 0 && ny < rows) {
             if (mode === 1) {
-              // Vivid Mode: Set maximum alpha for blocks
+       
               grid[ny][nx].alpha = 1;
             }
             if (mode === 2) {
-              // Dimmer Mode: Center block at higher alpha, surrounding blocks dimmer
               if (dx === 0 && dy === 0) {
                 grid[ny][nx].alpha = 0.4;
               } else {
