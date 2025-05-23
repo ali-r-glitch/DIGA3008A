@@ -24,4 +24,25 @@ document.addEventListener('DOMContentLoaded', () => {
       burger.setAttribute('aria-expanded', !expanded);
     });
   });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const btn = document.getElementById("backToTop");
+
+    // Show/hide button when scrolling
+    window.addEventListener("scroll", function () {
+      if (window.scrollY > 200) {
+        btn.style.display = "block";
+      } else {
+        btn.style.display = "none";
+      }
+    });
+
+    // Scroll smoothly to top when clicked
+    btn.addEventListener("click", function () {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    });
+  });
   
