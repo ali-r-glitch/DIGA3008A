@@ -1,17 +1,32 @@
 
-/* Blog Layout Grid */
 .layout {
   display: grid;
   grid-template-columns: 220px 1fr;
   gap: 2rem;
-  margin: 2rem auto;
+  margin: 0 auto;
   padding: 1rem;
-  width: 100%;
-  max-width: 100%;
+  height: 100vh; /* Full screen height */
   box-sizing: border-box;
 }
-
 /* Blog Navigation (Left Side) */
+/* Make blog-nav fill viewport height and scroll if needed */
+.blog-nav {
+  height: 100%; /* Match height of layout */
+  overflow-y: auto;
+  background-color: rgba(49, 52, 52, 0.9);
+  border-radius: 12px;
+  position: relative;
+}
+
+.blog-content {
+  height: 100%; /* Match height of layout */
+  overflow-y: auto;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 12px;
+  box-shadow: 0 0 10px #4aa0de66;
+}
+
 .blog-nav ul {
   list-style: none;
   padding: 1rem;
@@ -19,11 +34,16 @@
   background-color: rgba(49, 52, 52, 0.9);
   border-radius: 12px;
   width: 100%;
+  height: 100%;
   box-sizing: border-box;
+    overflow-y: auto;
+ 
 }
 
 .blog-nav li {
   margin-bottom: 1rem;
+  overflow-y: auto;
+   
 }
 
 .blog-nav a {
@@ -42,16 +62,7 @@
 }
 
 /* Blog Content Area (Right Side) */
-.blog-content {
-  overflow-y: auto;
-  max-height: 80vh;
-  padding: 2rem;
-  background-color: rgba(0, 0, 0, 0.7);
-  border-radius: 12px;
-  box-shadow: 0 0 10px #4aa0de66;
-  width: 100%;
-  box-sizing: border-box;
-}
+
 
 .blog-content::-webkit-scrollbar {
   width: 8px;
@@ -120,4 +131,4 @@ html, body {
   padding: 0;
   overflow-x: hidden;
 }
-  }
+  

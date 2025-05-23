@@ -63,7 +63,6 @@ nav.sub-nav {
   bottom: 0;
   left: 50%;
   width: 4px;
-  background: #ccc;
   transform: translateX(-50%);
   z-index: 0;
 }
@@ -104,6 +103,7 @@ nav.sub-nav {
 
 .timeline-block.left .timeline-content {
   margin-right: auto;
+   overflow-y: auto;   
 }
 
 .timeline-block.left .timeline-marker {
@@ -123,10 +123,12 @@ nav.sub-nav {
 .timeline-block.right {
   left: 50%;
   text-align: left;
+   
 }
 
 .timeline-block.right .timeline-content {
   margin-left: auto;
+  overflow-y: auto;   
 }
 
 .timeline-block.right .timeline-marker {
@@ -134,10 +136,10 @@ nav.sub-nav {
 }
 
 .timeline-content {
-  background: white;
+
   padding: 1rem 1.5rem;
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  box-shadow: 0 2px 8px rgb(192, 15, 147);
   max-width: 90%;
 }
 
@@ -170,6 +172,8 @@ nav.sub-nav {
 
 .more-text.expanded {
   max-height: 500px; /* enough for multiple paragraphs */
+  overflow-y: auto;  /* allows scrolling */
+
 }
 
 .hidden {
