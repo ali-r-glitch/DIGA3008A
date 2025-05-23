@@ -1,6 +1,8 @@
 
   html {
     scroll-padding-top: 100px;
+    
+  scroll-behavior: smooth;
   }
   /* ===== Timeline Styles ===== */
 
@@ -136,6 +138,7 @@
   overflow: hidden;
   transition: max-height 0.4s ease;
   display: inline-block; 
+   position: relative;
 }
 
 .more-text.expanded {

@@ -48,3 +48,13 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 });
 
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".scroll-inner-top").forEach(button => {
+      button.addEventListener("click", () => {
+        const container = button.closest(".more-text");
+        if (container) {
+          container.scrollTo({ top: 0, behavior: "smooth" });
+        }
+      });
+    });
+  });
