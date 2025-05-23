@@ -153,7 +153,7 @@
 }
 
 /* Responsive stacking */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .timeline-block,
   .timeline-block.left,
   .timeline-block.right {
@@ -175,5 +175,49 @@
   .timeline-line {
     left: 50%;
     transform: translateX(-50%);
+  }
+} */
+
+
+
+@media (max-width: 768px) {
+  .timeline {
+    position: relative;
+    margin: 2rem 0;
+    padding-left: 2rem; /* space for the vertical line */
+  }
+
+  .timeline::before {
+    left: 1rem; /* move the line to the left */
+    width: 2px;
+  }
+
+  .timeline-item {
+    position: relative;
+    margin: 2rem 0;
+    padding-left: 2rem;
+    width: 100%;
+    text-align: left;
+    clear: both;
+  }
+
+  .timeline-item::before {
+    left: 0.5rem; /* bullet or icon position */
+    margin-left: 0;
+  }
+
+  .timeline-content {
+    margin-left: 1rem;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-left: 3px solid #ff00d9;
+    border-radius: 0.5rem;
+  }
+
+  /* If you're using alternating left/right items */
+  .timeline-item.left,
+  .timeline-item.right {
+    float: none;
+    text-align: left;
   }
 }
