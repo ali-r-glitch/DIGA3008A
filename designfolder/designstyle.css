@@ -185,6 +185,7 @@
 @media (max-width: 768px) {
   html, body {
   overflow-x: hidden;
+
 }
   .timeline-block {
     width: 100% !important;
