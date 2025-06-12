@@ -150,7 +150,16 @@
 .hidden {
   display: none;
 }
+.scroll-inner-top {
+color: #ff00d9;
+background-color: black;
+border-radius: 20px;
+}
 
+.scroll-inner-top:hover {
+  background-color:white;
+  color: black;
+}
 
 /* Responsive stacking */
 /* @media (max-width: 768px) {
@@ -177,6 +186,7 @@
     transform: translateX(-50%);
   }
 } */
+ 
 
 @media (min-width: 769px) {
 .timeline-block.expanded {
