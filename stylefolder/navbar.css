@@ -43,7 +43,8 @@ nav.top-nav ul li {
 nav.top-nav ul li a {
   text-decoration: none;
   color: #ffffff;
-  font-size: 40px;
+  font-size: 30px;
+  font-family: "Tektur", sans-serif;
 }
 
 nav.top-nav ul li a:hover {
@@ -68,6 +69,7 @@ a.active {
   align-items: center;
   justify-content: flex-start; /* align to left */
   margin-right: 0;
+    padding-left: 20px;
 }
 
 /* --- TYPOGRAPHY & GENERAL STYLES --- */
@@ -250,7 +252,7 @@ height: 250px;
   align-items: flex-start; 
   justify-content: flex-start;
   transform: translateX(0%);
-  padding-left: 1rem; 
+
   }
 
 .nav-links li {
