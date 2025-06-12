@@ -62,28 +62,56 @@
   main {
     flex: 1; 
   }
-  
   .photo-grid {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    padding: 2rem;
-    flex-wrap: wrap;
-  }
-  
-  .photo-grid img {
-    flex: 1 1 300px; 
-    max-width: 30%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 16px;
-    box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
-  }
-  
-  .photo-grid img:hover {
-    transform: scale(1.05);
-  }
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  flex-wrap: wrap;
+}
+
+.photo-grid img {
+  flex: 1 1 300px;
+  max-width: 30%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.photo-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* Lightbox Styles */
+#lightbox {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .85);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+#lightbox.active {
+  display: flex;
+}
+
+#lightbox img {
+  max-width: 90%;
+  max-height: 80%;
+  padding: 8px;
+  background-color: black;
+  border: 2px solid white;
+  border-radius: 12px;
+}
+
   
 .cat-fact-container {
   display: flex;
@@ -121,9 +149,11 @@
   padding: 0.5rem 1rem;
   cursor: pointer;
   font-size: 1rem;
-  transition: background 0.2s;
+  transition:  0.2s;
 }
-
+.undertext{
+  text-align: center;
+}
 .cat-fact-content button:hover {
   background: #2e7bb4;
 }

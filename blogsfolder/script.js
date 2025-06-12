@@ -6,17 +6,17 @@ document.addEventListener("DOMContentLoaded", () => {
   const elements = Array.from(source.children);
   let index = 0;
 
-  function typeParagraph(element, callback) {
-    const p = document.createElement("p");
-    typedBlog.appendChild(p);
+  function typeElement(element, callback) {
+    const clone = document.createElement(element.tagName);
+    typedBlog.appendChild(clone);
     const text = element.textContent;
     let i = 0;
 
     function typeChar() {
       if (i < text.length) {
-        p.textContent += text.charAt(i);
+        clone.textContent += text.charAt(i);
         i++;
-        setTimeout(typeChar, 1); // Adjust speed
+        setTimeout(typeChar, 10); // adjust typing speed here
       } else {
         callback();
       }
@@ -31,12 +31,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const el = elements[index];
     index++;
 
-    if (el.tagName.toLowerCase() === "p") {
-      typeParagraph(el, showNext); // Type paragraphs
+    const tag = el.tagName.toLowerCase();
+    if (tag === "h1" || tag === "h2" || tag === "h3") {
+      typeElement(el, showNext); // animate only headings
     } else {
-      const clone = el.cloneNode(true); // Instantly show other elements
+      const clone = el.cloneNode(true);
       typedBlog.appendChild(clone);
-      setTimeout(showNext, 300); // Delay before next element
+      setTimeout(showNext, 200); // delay for other content
     }
   }
 

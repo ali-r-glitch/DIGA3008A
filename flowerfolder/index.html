@@ -1,7 +1,53 @@
-<canvas id="background"></canvas>
-<a href="../testing/index.html">
-  <button>Go to Testing Page</button>
-</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Testing Page</title>
+  <meta name="description" content="A test page with a flower background" />
+  <meta name="author" content="Ali Raffee" />
+  <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
+  <meta property="og:title" content="Ali Raffee's Portfolio" />
+  <meta property="og:type" content="website" />
 
-<script src="script.js"></script>
-<link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../stylefolder/navbar.css" />
+  <link rel="stylesheet" href="../stylefolder/normalize.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&family=Barlow+Condensed:wght@400;700&family=Tektur:wght@600&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <header>
+    <nav class="top-nav">
+      <div class="nav-container">
+        <ul class="nav-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../blogsfolder/index.html">Blogs</a></li>
+          <li><a href="../designfolder/design.html">Design</a></li>
+          <li><a href="../devfolder/dev.html">Projects</a></li>
+        </ul>
+        <button class="burger nav-toggle" aria-label="Toggle navigation">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <canvas id="background"></canvas>
+    <a href="../testing/index.html">
+      <button>Go to Testing Page</button>
+    </a>
+  </main>
+
+  
+  <script src="script.js"></script>
+  <script src="../scriptsfolder/overall.js"></script>
+
+  <footer>
+    <p>Alulu Studios 2025</p>
+  </footer>
+</body>
+</html>

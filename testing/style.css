@@ -15,20 +15,28 @@ canvas {
 
 button {
     position: absolute;
-    top: 20px;
-    left: 200px;
+    top: 80px;
+    
     padding: 10px 20px;
     background-color: rgba(255, 255, 255, 0.5);
     border: none;
     color: #fff;
     font-size: 16px;
     cursor: pointer;
-    z-index: 10;
+    z-index: 1001;
 }
 a flower{
 left:200px;
 }
+#toggle {
+  top: 80px;
+  left: 20px;
+}
 
+#flower {
+  top: 140px; /* pushed down below toggle button */
+  left: 20px;
+}
 button:hover {
     background-color: rgba(255, 255, 255, 0.8);
 }
