@@ -162,7 +162,29 @@
   margin-top: 0.5rem;
   word-break: break-word;
 }
-@media (max-width: 600px) {
+/* MOBILE: Always show figcaption below image, no hover */
+@media (max-width: 768px) {
+  .project-card figure {
+    position: static;
+  }
+
+  .project-card img {
+    height: auto; /* Allow image to adjust naturally */
+  }
+
+  .project-card figcaption {
+    position: static;
+    opacity: 1;
+    background: none;
+    color: inherit;
+    padding: 1rem 0 0 0;
+    transition: none;
+  }
+
+  .project-card:hover figcaption {
+    opacity: 1;
+  }
+
   .cat-fact-container {
     flex-direction: column;
     max-width: 100%;
